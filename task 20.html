@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function alphabet_order(str)
+  {
+    let res="";
+    str=str.toLowerCase();
+    const myArray=str.split(' ');
+    for (var i = 0; i < myArray.length; i++) {
+      let arr = myArray[i].split("");
+      arr.sort();
+      let ar=arr.toString();
+      res=res+arr+" ";
+  }
+  res=res.replaceAll(',','');
+  return res;
+  }
+  let str= prompt("Please enter a String");
+console.log("Expected Output :"+alphabet_order(str));
+    </script>
+</body>
+</html>
